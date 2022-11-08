@@ -1,12 +1,137 @@
-body {
+html{
+  font-family: 'Space Mono', monospace;
+}
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+}
+.Calc-container > *{
+  margin-top: 32px;
 }
 
+.Calc-container > *:first-child {
+  margin-top: 0px;
+}
+
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color:rgba(197, 228, 231, 1);
+  min-height:100vh;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.flexed{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.tip-amount{
+  margin-bottom: 25px;
+}
+.total{
+  margin-bottom: 25px;
+}
+
+button:hover{
+  background: #26C2AE;
+  cursor: pointer;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.logo{
+  margin-block: 50px 40px;
+  margin-inline: auto;
+  display: block;
+}
+.inputWithIcon{
+  position: relative;
+  margin-top: 0.50rem;
+}
+.inputWithIcon > img{
+  position: absolute;
+  top: 50%;
+  left: 1.05rem;
+  transform: translate(-50%, -50%);
+}
+#custom{
+  width: 147.81px;
+  height: 48px;
+  border-radius: 5px;
+}
+@media screen and (min-width: 1024px){
+  #custom{
+    width: 118px;
+  }
+  .inputWithIcon{
+    width: 379px;
+  }
+  .calc-result > button {
+    font-weight: 700;
+    cursor: pointer;
+    font-family: 'Space Mono', monospace;
+
+    text-transform: uppercase;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    color: #00474B;
+    height: 48px;
+    width: 333px;
+    margin-top: 134px;
+    border-radius: 5px;
+    background-color: #0D686D;
+    outline: none;
+    border: none;
+    margin-inline: auto;
+    display: block;
+  }
+}
+.calc-result > button{
+  font-weight: 700;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+  color: #00474B;
+  height: 48px;
+  width: 100%;
+  border-radius: 5px;
+  background-color: #0D686D;
+  outline: none;
+  border: none;
+}
+.calc-result{
+  padding: 39px 22px 22px 22px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-radius: 15px;
+  background-color: #00474B;
+}
+.calc-result > button:hover{
+  color: #00474B;
+  background: #9FE8DF;
+}
+form > label{
+  margin-bottom: 6px;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
